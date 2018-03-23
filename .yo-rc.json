@@ -1,0 +1,9 @@
+{
+  "generator-ng-section": {
+    "promptValues": {
+      "wwwPath": "client",
+      "appModulesParentPath": "app/main",
+      "mainModuleFilePath": "app/index.module.js"
+    }
+  }
+}

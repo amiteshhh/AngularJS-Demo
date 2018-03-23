@@ -1,0 +1,15 @@
+body{
+  background-color: white;
+  padding:10px;
+}
+.navbar-nav li > a.active{
+  color: #fff;
+  background-color: #080808;
+}
+.xng-scope{
+  margin: 5px;
+  border: 1px solid red;
+}
+.odd-row{
+  border: 1px solid green
+}
