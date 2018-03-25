@@ -1,1 +1,23 @@
-<div xng-controller="HomeCtrl as vm">Message: {{vm.message}}</div>
+<div class="view-container">
+    <h2>Welcome to the AngularJS demo.</h2>
+    Demo covers below topics
+    <ul>
+        <li>DOM manipulation using pure Javascript</li>
+        <li>DOM manipulation/Data binding using AngularJS</li>
+        <li>Event binding</li>
+        <li>Understanding $scope which acts as a middle man between DOM and data(i.e view and model)</li>
+        <li>Angular Controller to extend $scope with data and event methods required for the view</li>
+        <li>Angular Services to define data and business logic</li>
+        <li>Representing model/data differently in view using Angular Filter</li>
+        <li>Single page application using ui-route</li>
+    </ul>
+    <div class="alert alert-info">
+        No framework whether AngularJS or jQuery can add new capability to the native JavaScript/HTML feature. They simply put abstraction
+        layer over the core feature to handle the things in somehow more convinient way. For example
+        <br>
+        <ul>
+            <li>$http or $.ajax has been created on the top of native xmlHTTP object to handle ajax call.</li>
+            <li>`on` method encapsulated over native `addEventListener` for event binding</li>
+        </ul>
+    </div>
+</div>

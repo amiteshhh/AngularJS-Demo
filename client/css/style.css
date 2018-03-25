@@ -6,6 +6,10 @@ body{
   color: #fff;
   background-color: #080808;
 }
+
+.view-container{
+  min-height: 150px;
+}
 .xng-scope{
   margin: 5px;
   border: 1px solid red;

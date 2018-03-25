@@ -1,0 +1,13 @@
+<div class="view-container" ng-init="active=1">
+    <uib-tabset uib-active="active">
+        <uib-tab heading="Native">
+            <div ng-include="'app/main/examples/pureJS.html'" onload="vm.bindValueUsingJS()"></div>
+        </uib-tab>
+        <uib-tab heading="Understanding $scope">
+            <div ng-include="'app/main/examples/scope.html'"></div>
+        </uib-tab>
+        <uib-tab heading="Validation and Formatting">
+            <div ng-include="'app/main/examples/scope.html'"></div>
+        </uib-tab>
+    </uib-tabset>
+</div>

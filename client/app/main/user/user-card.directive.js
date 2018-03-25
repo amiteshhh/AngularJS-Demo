@@ -27,7 +27,6 @@
                     var modalInstance = $uibModal.open({
                         templateUrl: 'app/main/user/user-details.html',
                         controller: function(userDetails){
-                            debugger;
                             var modalVm = this;
                             modalVm.userDetails = userDetails;
                             modalVm.userDetails = vm.userDetails;
@@ -42,7 +41,7 @@
                       });
 
                       modalInstance.result.then(function(data){
-                        debugger;
+           
                         console.log(data);
                       }).catch(function(){
                           //do nothing

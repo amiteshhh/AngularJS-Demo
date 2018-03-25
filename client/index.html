@@ -1,7 +1,7 @@
 <html ng-app="app">
 
 <head>
-    <title ng-bind="$root.pageTitle || 'ng demo'"></title>
+    <title ng-bind="$root.pageTitle || &apos;ng demo&apos;"></title>
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -42,7 +42,24 @@
   <script src="app/main/user/user-details.controller.js"></script>
   <script src="app/main/user/user-card.directive.js"></script>
   <!--  End of module : app.user  -->
+  <!--  module : app.examples  -->
+  <script src="app/main/examples/examples.module.js"></script>
+  <script src="app/main/examples/examples.route.js"></script>
+  <script src="app/main/examples/examples.service.js"></script>
+  <script src="app/main/examples/examples.controller.js"></script>
+  <!--  End of module : app.examples  -->
+  <!--  module : app.about  -->
+  <script src="app/main/about/about.module.js"></script>
+  <script src="app/main/about/about.route.js"></script>
+  <script src="app/main/about/about.controller.js"></script>
+  <!--  End of module : app.about  -->
 </body>
 
+<script id="admin-ng-template" type="text/ng-template"><!-- id prop can hold any value like admin.html or app/main/admin.html etc-->
+    <div class="view-container">
+        <h2>Welcome Admin!</h2>
+        This template does not locate to any physical file location. Rather it has been defined in index.html using AngularJS ng-template feature.
+    </div>
+</script>
 
 </html>

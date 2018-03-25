@@ -1,27 +1,25 @@
-<div class="panel panel-primary">
-    <div class="panel-heading">List of Users
-        <a ui-sref="user-details({id:0})" class="btn btn-warning pull-right" style="margin-top: -7px;">Add user</a>
-    </div>
-    <div class="panel-body">
-        <h2>List of users using user-card directive</h2>
-        <div ng-repeat="user in vm.users">
-            <user-card user-details="user"></user-card>
+<div class="view-container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">List of Users
+            <a ui-sref="user-details({id:0})" class="btn btn-warning pull-right" style="margin-top: -7px;">Add user</a>
         </div>
-        <div style="clear: both"></div>
-        <h2>List of users without user-card</h2>
-        <div ng-class="{active: vm.activeUser === user}" ng-repeat="user in vm.users track by user.id">
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <h3>
-                    <a ui-sref="user-details({data: user, id: user.id, id2:12, id3:13})">{{user.name}}</a>
-                </h3>
-                <span class="text-small" ng-click="vm.loadUser(user)">{{user.email}}</span>
-                <button type="button" class="btn btn-primary" ng-click="vm.activeUser = user">{{vm.showAdditionalInfo ? 'Hide' : 'Show more...'}}</button>
-                <button type="button" class="btn btn-secondary" ng-click="vm.openUserModal(user)">Edit in Modal</button>
+        <div class="panel-body">
+            <h2>List of users using user-card directive</h2>
+            <div ng-repeat="user in vm.users">
+                <user-card user-details="user"></user-card>
+            </div>
+            <div style="clear: both"></div>
+            <h2>List of users without user-card</h2>
+            <div ng-class="{active: vm.activeUser === user}" ng-repeat="user in vm.users track by user.id">
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <h3>
+                        <a ui-sref="user-details({data: user, id: user.id, id2:12, id3:13})">{{user.name}}</a>
+                    </h3>
+                    <span class="text-small" ng-click="vm.loadUser(user)">{{user.email}}</span>
+                    <button type="button" class="btn btn-primary" ng-click="vm.activeUser = user">{{vm.showAdditionalInfo ? 'Hide' : 'Show more...'}}</button>
+                    <button type="button" class="btn btn-secondary" ng-click="vm.openUserModal(user)">Edit in Modal</button>
+                </div>
             </div>
         </div>
     </div>
 </div>
-
-<script id="script-template-example" type="text/ng-template">
-    Here are some content
-</script>

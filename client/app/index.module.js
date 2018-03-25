@@ -7,7 +7,11 @@
             // home module
             'app.home',
             // user module
-            'app.user'
+            'app.user',
+            // examples module
+            'app.examples',
+            // about module
+            'app.about'
         ];
     angular.module(moduleName, requires);
 }());

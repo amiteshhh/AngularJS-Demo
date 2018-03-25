@@ -5,26 +5,30 @@
         </div>
         <ul class="nav navbar-nav">
             <li>
-                <a ui-sref="home" ui-sref-active="active">Home</a>
+                <a ui-sref="home" ui-sref-active="active" title="Uses state name">Home</a>
+                <!-- value of ui-sref-active(i.e active in above case) will be added to the class if that state 'home' is active -->
             </li>
             <li>
-                <a href="#/user" ui-sref-active="active">User</a>
+                <a ui-sref="about" ui-sref-active="active" ng-click="appVm.confirmBeforeRoute('about', $event)" title="Uses state name but validate before routing">About</a>
             </li>
             <li>
-                <a ng-click="appVm.loadHome()" ui-sref-active="active">Home Via Click</a>
+                <a href="#/user" ui-sref-active="active" title="Uses href">User</a>
             </li>
             <li>
-                <a ui-sref="examples" ui-sref-active="active">Examples</a>
+                <a ng-click="appVm.loadState('examples')" href="javascript:;" ui-sref-active="active" title="Uses $state.go method" ng-class="{active: appVm.isStateActive('examples')}">Examples</a>
+                <!-- href added to make it cross browser compliant -->
+                <!-- ui-sref-active wont work without ui-sref -->
+            </li>
+            <li>
+                <a ui-sref="admin" ui-sref-active="active" title="requires authorization">Admin</a>
             </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li>
-                <a href="#">
-                    <span class="glyphicon glyphicon-user"></span> Sign Up</a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="glyphicon glyphicon-log-in"></span> Login</a>
+                <label class="form-control" style="margin-top: 8px; cursor: pointer;">
+                    Admin ?
+                    <input type="checkbox" ng-model="$root.loggedInUserInfo.isAdmin">
+                </label>
             </li>
         </ul>
     </div>

@@ -2,10 +2,10 @@
     'use strict';
     /**
      * @ngdoc service
-     * @module app.user
-     * @name UserSvc
+     * @module app
+     * @name APP_CONSTANT
      * @description
-     * Service to manage user
+     * Contains application level constants
      */
 
     var moduleName = 'app';

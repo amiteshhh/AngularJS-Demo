@@ -1,0 +1,22 @@
+<h4>Sample binding using javascript methods</h4>
+<div id="bindContainer">
+    Name:
+    <span bind-value="name"></span>
+    <br> Age:
+    <span bind-value="age"></span>
+    <br> dob:
+    <span bind-value="dob"></span>
+</div>
+Name Outside container(should not get binded):
+<span bind-value="name"></span>
+<div class="alert alert-info">
+        Refer _bindValueUsingJS method defined in <a target="_blank" href="app/main/examples/examples.controller.js">examples.controller.js&nbsp;<i class="glyphicon glyphicon-new-window"></i></a> for implementation details.
+
+    </div>
+<script type="text/javascript">
+    //html5 doesn't execute script tag while setting innerHTML 
+    //and therefore when this page is injected via ng-include no script tag processed
+    /* (function () {
+       logic moved to controller in _bindValueUsingJS fn
+    })(); */
+</script>
